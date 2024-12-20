@@ -19,5 +19,7 @@ player_speed = 5
 running = True
 while running :
     for event in pygame.event.get() :
-        if event.type == pygame.QUIT
-        running = False
+        if event.type == pygame.QUIT:
+            running = False
+    #keys
+    keys = pygame.key.get_pressed()
