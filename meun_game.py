@@ -23,5 +23,7 @@ def main_menu():
         draw_text("Press Enter to Start", 36 ,BLACK , screen_width // 2 , screen_height // 2)
         pygame.display.flip()
         clock.tick(FPS)
+#ฟังก์ชันหลัก
+
         
 
