@@ -7,3 +7,8 @@ class Bullet(pygame.sprite.sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (x,y)
         
+    def update(self):
+        self.rect.y -= 10
+        if self.rect.bottom < 0:
+             self.kill()
+
