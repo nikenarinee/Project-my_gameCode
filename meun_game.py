@@ -16,14 +16,24 @@ RED = (255,0,0)
 def main_menu():
     while True:
         for event in pygame.event.get():
-            if event.key == pygame.K_RETURN:
-                game_loop()
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:
+                    game_loop()
         screen.fill(WHITH)
         draw_text("Main Menu",64,BLACK,WIDTH // 2 , screen_height // 2 - 50)
         draw_text("Press Enter to Start", 36 ,BLACK , screen_width // 2 , screen_height // 2)
         pygame.display.flip()
         clock.tick(FPS)
-#ฟังก์ชันหลัก
+        scree.fill(WHITH)
+        draw_text('Main Menu', 64 , BLACK,screen_width // 2,screen_height // 2 - 50)
+        draw_text('Press Enter to Start', 36 , BLACK,screen_width // 2,screen_height // 2 )
+        pygame.display.flip()
+        clock.tick(FPS)
+#ฟังก์ชันสำหรับเกม
+
 
         
 
