@@ -33,6 +33,19 @@ def main_menu():
         pygame.display.flip()
         clock.tick(FPS)
 #ฟังก์ชันสำหรับเกม
+def game_loop():
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+        screen.fill(WHITH)
+        draw_text('Game Running...',48,BLACK,screen_width//2 , screen_height//2)
+        pygame.display.flip()
+        clock.tick(FPS)
+
+#ฟังก์ชันการวาดข้อความ
 
 
         
