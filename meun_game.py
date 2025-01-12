@@ -46,6 +46,7 @@ def game_loop():
         clock.tick(FPS)
 
 #ฟังก์ชันการวาดข้อความ
+def
 
 
         
