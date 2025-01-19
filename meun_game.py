@@ -46,7 +46,22 @@ def game_loop():
         clock.tick(FPS)
 
 #ฟังก์ชันการวาดข้อความ
+def draw_text(text, size, color, x, y) :
+    font = pygame. font. Font (None, size)
+    text_surface = font. render (text, True, color)
+    text_rect = text_surface.get_rect (center=(x, y))
+    screen. blit (text_surface, text_rect)
+# ฟังก์ชั่นหลัก
+def main() :
+    global screen, clock
+    pygame. init ( )
+    screen = pygame.display.set_mode ( (WIDTH, HEIGHT))
+    pygame.display.set_caption ("Game with Menu")
+    clock = pygame. time.Clock ()
 
+    main_menu ()
+if __name__ == "__main__":
+    main ()
 
         
 
