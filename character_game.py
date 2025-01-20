@@ -21,4 +21,4 @@ def update(self):
 def shoot(self):
     bullet = Bullet(self.rect.centerx, self.rect.top)
     all_sprites.add(bullet)
-    bullets.add(bullet)
+    bullets.add
