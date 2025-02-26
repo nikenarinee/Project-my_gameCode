@@ -7,7 +7,6 @@ FPS = 60
 
 # เริ่มต้น Pygame
 pygame.init()
-<<<<<<< HEAD
 #กำหนดขนาดหน้าจอ
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -15,9 +14,7 @@ WIDTH = 800
 HEIGHT = 600
 FPS = 60
 scree = pygame.display.set_mode((WIDTH,HEIGHT))
-=======
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
->>>>>>> 9f2cd33a0a05c261e759926c96eb9bb51398491e
 pygame.display.set_caption("My First Game")
 
 #color
@@ -37,7 +34,6 @@ def main_menu():
                 if event.key == pygame.K_RETURN:
                     game_loop()
         screen.fill(WHITH)
-<<<<<<< HEAD
         draw_text("Main Menu",64,BLACK,WIDTH // 2,HEIGHT // 2 - 50)
         draw_text("Press Enter to Start", 36 ,BLACK , WIDTH // 2 , HEIGHT // 2)
         pygame.display.flip()
@@ -45,11 +41,8 @@ def main_menu():
         scree.fill(WHITH)
         draw_text('Main Menu', 64 , BLACK,WIDTH// 2,HEIGHT // 2 - 50)
         draw_text('Press Enter to Start', 36 , BLACK,WIDTH // 2,HEIGHT // 2 )
-=======
         draw_text("Main Menu", 64, BLACK, WIDTH // 2, HEIGHT // 2 - 50)
         draw_text("Press Enter to Start", 36, BLACK, WIDTH // 2, HEIGHT // 2)
-        
->>>>>>> 9f2cd33a0a05c261e759926c96eb9bb51398491e
         pygame.display.flip()
         clock.tick(FPS)
 #ฟังก์ชันสำหรับเกม
@@ -60,12 +53,9 @@ def game_loop():
                 pygame.quit()
                 sys.exit()
 
-        screen.fill(WHITH)
-<<<<<<< HEAD
+        screen.fill(WIDTH)
         draw_text('Game Running...',48,BLACK,WIDTH//2 , HEIGHT // 2 )
-=======
         draw_text("Game Running...", 48, BLACK, WIDTH // 2, HEIGHT // 2)
->>>>>>> 9f2cd33a0a05c261e759926c96eb9bb51398491e
         pygame.display.flip()
         clock.tick(FPS)
 
