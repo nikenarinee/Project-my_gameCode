@@ -1,15 +1,15 @@
 import pygame
 import sys
-import random
-import WIDTH
-import HEIGHT
-import FPS
+
+# กำหนดค่าคงที่
+WIDTH, HEIGHT = 800, 600
+FPS = 60
+
+# เริ่มต้น Pygame
 pygame.init()
-#กำหนดขนาดหน้าจอ
-screen_width = 800
-screen_height = 600
-scree = pygame.display.set_mode((screen_width,screen_height))
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("My First Game")
+
 #color
 WHITH = (255,255,255)
 BLUE = (0,0,255)
@@ -27,13 +27,9 @@ def main_menu():
                 if event.key == pygame.K_RETURN:
                     game_loop()
         screen.fill(WHITH)
-        draw_text("Main Menu",64,BLACK,WIDTH // 2 , screen_height // 2 - 50)
-        draw_text("Press Enter to Start", 36 ,BLACK , screen_width // 2 , screen_height // 2)
-        pygame.display.flip()
-        clock.tick(FPS)
-        scree.fill(WHITH)
-        draw_text('Main Menu', 64 , BLACK,screen_width // 2,screen_height // 2 - 50)
-        draw_text('Press Enter to Start', 36 , BLACK,screen_width // 2,screen_height // 2 )
+        draw_text("Main Menu", 64, BLACK, WIDTH // 2, HEIGHT // 2 - 50)
+        draw_text("Press Enter to Start", 36, BLACK, WIDTH // 2, HEIGHT // 2)
+        
         pygame.display.flip()
         clock.tick(FPS)
 #ฟังก์ชันสำหรับเกม
@@ -45,7 +41,7 @@ def game_loop():
                 sys.exit()
 
         screen.fill(WHITH)
-        draw_text('Game Running...',48,BLACK,screen_width//2 , screen_height//2)
+        draw_text("Game Running...", 48, BLACK, WIDTH // 2, HEIGHT // 2)
         pygame.display.flip()
         clock.tick(FPS)
 

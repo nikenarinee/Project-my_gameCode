@@ -1,14 +1,17 @@
 import pygame
-import WIDTH ,HEIGHT ,BLACK
-from bullet import Bullet
+import Bullet
+WIDTH = 800
+HEIGHT = 600
+BLACK = (0, 0, 0)
+
 class Player(pygame.sprite.Sprite):
     def __init__(self) : 
         super().__init__()
         self.image = pygame.Surface((50,50))
         self.image.fill(BLACK)
         self.rect = self.image.get_rect()
-        self.rect.comter = (WIDTH // 2, HEIGHT // 2)
-        self.scoro = 0
+        self.rect.cemter = (WIDTH // 2, HEIGHT // 2)
+        self.score = 0
 
     def update(self):
         keys = pygame.key.get_pressed()

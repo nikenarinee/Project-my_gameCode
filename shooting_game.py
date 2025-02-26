@@ -1,7 +1,7 @@
 import pygame
-import RED
+RED = (255, 0, 0)
 # กำหนดคลาสสำหรับกระสุน
-class Bullet(pygame.sprite.sprite):
+class Bullet(pygame.sprite.Sprite):
     def _init_(self, x, y):
         super()._init_()
         self.image = pygame.Surface((5, 10))

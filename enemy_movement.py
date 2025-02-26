@@ -1,11 +1,13 @@
 import pygame
-import RED
 import random
-import WIDTH , HEIGHT
 import math
+# กำหนดขนาดหน้าจอ
+WIDTH, HEIGHT = 800, 600
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
 #คลาสสำหรับศัตรู
 class Enemy(pygame.sprite.Sprite):
-    def init (self, player):
+    def _init_ (self, player):
          super().__init__()
          self.image = pygame. Surface((50, 50))
          self.image.fill(RED)
@@ -13,10 +15,10 @@ class Enemy(pygame.sprite.Sprite):
          self.rect.x = random.randint (0, WIDTH)
          self.rect.y = random.randint(0, HEIGHT)
          self.player = player
-    def updete(self):
+    def update(self):
         #คำนวนทิศทางไปยังผู้เล่น
         direction_x = self.player.rect.centerx -self.rect.centerx
-        direction_y = self.player.rect.centerx -self.rect.centerx
+        direction_y = self.player.rect.centery -self.rect.centery
         distance = math.hypot(direction_x,direction_y)
 
         if distance > 0:
