@@ -1,3 +1,5 @@
+import pygame
+import RED
 # กำหนดคลาสสำหรับกระสุน
 class Bullet(pygame.sprite.sprite):
     def _init_(self, x, y):

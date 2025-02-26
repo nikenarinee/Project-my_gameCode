@@ -1,5 +1,9 @@
 import pygame
 import sys
+import random
+import WIDTH
+import HEIGHT
+import FPS
 pygame.init()
 #กำหนดขนาดหน้าจอ
 screen_width = 800
